@@ -21,7 +21,6 @@ class SecondsViewModelWithInheritance(application: Application) : BaseViewModel(
         super.start()
 
         Observable.interval(1, TimeUnit.SECONDS)
-            .observeOn(AndroidSchedulers.mainThread())
             .doOnSubscribe { mutableIsDisposed.value = false }
             .doOnDispose {
                 Log.d(LOG_TAG, "Subscription disposed auto magically")

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AutoDisposablePlayground</string>
+    <string name="view_model_with_inheritance_sample">View model with inheritance sample</string>
+    <string name="view_model_with_composition_sample">View model with composition sample</string>
+    <string name="observable_has_been_disposed_successfully">The observable has been disposed successfully!!</string>
+    <string name="force_view_model_start_event">Force VM start event</string>
+    <string name="force_view_model_stop_event">Force VM stop event</string>
+</resources>

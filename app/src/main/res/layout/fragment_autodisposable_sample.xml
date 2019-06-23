@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Rukeitor de los rukones"/>
+
+    <TextView
+            android:id="@+id/observableDisposed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:textColor="#2F7E32"
+            android:visibility="gone"
+            android:text="@string/observable_has_been_disposed_successfully"
+            tools:visibility="visible"/>
+
+    <TextView
+            android:id="@+id/seconds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_gravity="center"
+            tools:text="20"/>
+
+    <Button android:id="@+id/forceViewModelStartEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/force_view_model_start_event"/>
+
+    <Button android:id="@+id/forceViewModelStopEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/force_view_model_stop_event"/>
+</LinearLayout>

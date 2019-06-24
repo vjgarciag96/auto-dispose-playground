@@ -1,16 +1,14 @@
 package com.vjgarcia.autodisposableplayground.presentation
 
-import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.uber.autodispose.AutoDispose
 import com.vjgarcia.autodisposableplayground.autodispose.BaseViewModel
 import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
 import java.util.concurrent.TimeUnit
 
-class SecondsViewModelWithInheritance(application: Application) : BaseViewModel(application) {
+class SecondsViewModelWithInheritance : BaseViewModel() {
 
     private val mutableSeconds = MutableLiveData<Long>()
     val seconds: LiveData<Long> = mutableSeconds

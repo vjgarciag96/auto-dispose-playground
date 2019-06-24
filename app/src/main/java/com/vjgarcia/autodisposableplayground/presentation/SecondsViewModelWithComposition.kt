@@ -1,20 +1,15 @@
 package com.vjgarcia.autodisposableplayground.presentation
 
-import android.app.Application
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.uber.autodispose.AutoDispose.autoDisposable
 import com.vjgarcia.autodisposableplayground.autodispose.ViewModelScope
 import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
 import java.util.concurrent.TimeUnit
 
-class SecondsViewModelWithComposition(
-    private val viewModelScope: ViewModelScope,
-    application: Application
-) : AndroidViewModel(application) {
+class SecondsViewModelWithComposition(private val viewModelScope: ViewModelScope) : ViewModel() {
 
     private val mutableSeconds = MutableLiveData<Long>()
     val seconds: LiveData<Long> = mutableSeconds

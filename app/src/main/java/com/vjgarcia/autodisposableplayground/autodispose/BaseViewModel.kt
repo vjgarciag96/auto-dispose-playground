@@ -1,16 +1,13 @@
 package com.vjgarcia.autodisposableplayground.autodispose
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import com.uber.autodispose.lifecycle.CorrespondingEventsFunction
 import com.uber.autodispose.lifecycle.LifecycleEndedException
 import com.uber.autodispose.lifecycle.LifecycleScopeProvider
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
-abstract class BaseViewModel(application: Application) :
-    AndroidViewModel(application),
-    LifecycleScopeProvider<ViewModelDisposableEvent> {
+abstract class BaseViewModel : ViewModel(), LifecycleScopeProvider<ViewModelDisposableEvent> {
 
     private val eventsSubject = BehaviorSubject.create<ViewModelDisposableEvent>()
 

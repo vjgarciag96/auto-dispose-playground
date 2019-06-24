@@ -15,7 +15,7 @@ class SecondsViewModelWithInheritance(application: Application) : BaseViewModel(
     private val mutableSeconds = MutableLiveData<Long>()
     val seconds: LiveData<Long> = mutableSeconds
     private val mutableIsDisposed = MutableLiveData<Boolean>()
-    val isDisposed = mutableIsDisposed
+    val isDisposed: LiveData<Boolean> = mutableIsDisposed
 
     override fun start() {
         super.start()
